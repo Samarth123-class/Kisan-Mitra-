@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#075b35">
+
+    <title>Marutham | Smart Agriculture</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <a href="#" class="brand">
+            <span class="brand-icon">🌿</span>
+            <span>Marutham</span>
+        </a>
+
+        <div class="header-actions">
+            <select id="languageSelect" aria-label="Choose language">
+                <option value="en">English</option>
+                <option value="kn">ಕನ್ನಡ</option>
+                <option value="hi">हिन्दी</option>
+                <option value="ta">தமிழ்</option>
+                <option value="te">తెలుగు</option>
+                <option value="ml">മലയാളം</option>
+            </select>
+
+            <button class="notification-btn" aria-label="Notifications">
+                ♧
+            </button>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- DASHBOARD -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <p class="tagline">
+                    Technology That Speaks the Farmer's Language.
+                </p>
+
+                <h1>Healthy Soil,<br>Better Crops.</h1>
+
+                <p>
+                    Smart agricultural guidance for every farmer.
+                </p>
+
+                <a href="#services" class="primary-btn">
+                    Explore Services →
+                </a>
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section id="services" class="services section">
+            <div class="section-heading">
+                <span></span>
+                <h2>Our Services</h2>
+                <span></span>
+            </div>
+
+            <div class="service-grid">
+
+                <a href="#crop-doctor" class="service-card">
+                    <span class="service-icon">🌿</span>
+                    <span>
+                        <strong>Crop Doctor</strong>
+                        <small>Crop health guidance</small>
+                    </span>
+                    <span class="arrow">›</span>
+                </a>
+
+                <a href="#soil" class="service-card">
+                    <span class="service-icon">🌱</span>
+                    <span>
+                        <strong>Soil Intelligence</strong>
+                        <small>Understand your soil</small>
+                    </span>
+                    <span class="arrow">›</span>
+                </a>
+
+                <a href="#schemes" class="service-card">
+                    <span class="service-icon">🏛</span>
+                    <span>
+                        <strong>Govt. Schemes</strong>
+                        <small>Discover benefits</small>
+                    </span>
+                    <span class="arrow">›</span>
+                </a>
+
+                <a href="#marketplace" class="service-card">
+                    <span class="service-icon">🛒</span>
+                    <span>
+                        <strong>Agri Marketplace</strong>
+                        <small>Explore farm products</small>
+                    </span>
+                    <span class="arrow">›</span>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- VOICE ASSISTANT -->
+        <section id="assistant" class="voice-section section">
+            <div>
+                <h2>Talk to Marutham</h2>
+                <p>Your multilingual farming assistant</p>
+            </div>
+
+            <button id="voiceButton" class="mic-button"
+                    aria-label="Start voice assistant">
+                🎙
+            </button>
+
+            <p id="voiceStatus">Tap the microphone to speak</p>
+        </section>
+
+        <!-- CROP DOCTOR -->
+        <section id="crop-doctor" class="feature-section section">
+            <h2>AI Crop Doctor</h2>
+            <p>Upload a crop photograph to get crop health guidance.</p>
+
+            <label for="cropImage">Choose crop photograph</label>
+            <input type="file" id="cropImage" accept="image/*">
+
+            <div id="cropPreview" class="preview-area">
+                Your crop photograph will appear here.
+            </div>
+
+            <button id="analyzeCrop" class="primary-btn">
+                Analyze Crop
+            </button>
+
+            <div id="cropResult" aria-live="polite"></div>
+        </section>
+
+        <!-- SOIL INTELLIGENCE -->
+        <section id="soil" class="feature-section section">
+            <h2>Soil Intelligence</h2>
+            <p>Enter your soil report details.</p>
+
+            <div class="input-grid">
+                <input type="number" placeholder="Soil pH" id="soilPH">
+                <input type="number" placeholder="Nitrogen (N)" id="nitrogen">
+                <input type="number" placeholder="Phosphorus (P)" id="phosphorus">
+                <input type="number" placeholder="Potassium (K)" id="potassium">
+            </div>
+
+            <button id="soilSubmit" class="primary-btn">
+                View Soil Information
+            </button>
+
+            <div id="soilResult" aria-live="polite"></div>
+        </section>
+
+        <!-- GOVERNMENT SCHEMES -->
+        <section id="schemes" class="feature-section section">
+            <h2>Government Schemes</h2>
+            <p>Discover agricultural schemes and benefits.</p>
+
+            <input type="search" id="schemeSearch"
+                   placeholder="Search government schemes...">
+
+            <div class="filter-buttons">
+                <button data-filter="all">All</button>
+                <button data-filter="central">Central</button>
+                <button data-filter="state">State</button>
+            </div>
+
+            <div id="schemeList">
+                <article class="scheme-card" data-category="central">
+                    <h3>PM-KISAN</h3>
+                    <p>Explore eligibility and official scheme information.</p>
+                    <a href="https://pmkisan.gov.in/" target="_blank"
+                       rel="noopener noreferrer">Official Website →</a>
+                </article>
+
+                <article class="scheme-card" data-category="central">
+                    <h3>Kisan Credit Card</h3>
+                    <p>Explore agricultural credit information.</p>
+                    <a href="https://www.myscheme.gov.in/" target="_blank"
+                       rel="noopener noreferrer">Find Scheme Details →</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- MARKETPLACE -->
+        <section id="marketplace" class="feature-section section">
+            <h2>Agri Marketplace</h2>
+            <p>Explore agricultural products and farming resources.</p>
+            <div class="marketplace-placeholder">
+                Marketplace products will appear here.
+            </div>
+        </section>
+
+        <!-- FARMER PROFILE -->
+        <section id="profile" class="feature-section section">
+            <h2>Farmer Profile</h2>
+            <p>Manage your farming information and yearly records.</p>
+
+            <input type="text" id="farmerName"
+                   placeholder="Farmer's name">
+
+            <input type="text" id="farmLocation"
+                   placeholder="Farm location">
+
+            <button id="saveProfile" class="primary-btn">
+                Save Profile
+            </button>
+
+            <div id="profileResult" aria-live="polite"></div>
+        </section>
+
+    </main>
+
+    <!-- BOTTOM NAVIGATION -->
+    <nav class="bottom-nav">
+        <a href="#home">⌂<small>Home</small></a>
+        <a href="#services">▦<small>Services</small></a>
+        <a href="#assistant" class="nav-mic">🎙</a>
+        <a href="#profile">♙<small>Profile</small></a>
+        <a href="#marketplace">⋯<small>More</small></a>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>
